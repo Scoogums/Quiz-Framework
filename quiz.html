@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="js/quiz.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Flag Learning Quiz</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+    <link href="album.css" rel="stylesheet">
+    <style>
+        img {
+            height: 100%;
+            width: 100%;
+            border:5px solid #000000;
+        }
+        .right {
+            border:5px solid #31c524;
+        }
+        .wrong {
+            border:5px solid #b02300;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Flag Quiz!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index.html">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/quiz.html">Quiz <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/charts.html">Progress <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/album.html">Learning <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/changeFlags.html">Change Flags<span class="sr-only"></span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" id="quizFinished">
+        <div class="container">
+            <h1 class="display-3">The quiz is over! Your score was:</h1>
+            <h1 id="quizResults">1/10</h1>
+            <p>You can try again if you like, or go to the progress page to view your progress so far.</p>
+            <p><a class="btn btn-primary btn-lg" href="" role="button" id="retryButton">Try again &raquo;</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/charts.html" role="button">View your progress &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="quizUI">
+            <div class="row">
+                <div class="col"><h3 id="stage">Question 1 of 10</h3></div>
+                <div class="col"><h3 id="score">Current score 0/10</h3></div>
+            </div>
+            <div id="flagImage"></div>
+            <br>
+            <h3 id="correctOrWrong">Select the correct flag!</h3>
+        </div>
+    </div>
+
+    <div class="album text-muted" id="answers">
+        <div class="container">
+
+            <div class="row" id="albumStuff">
+            </div>
+
+        </div>
+    </div>
+    <div class="album text-muted" id="rightOrWrong">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+
+                </div>
+                <div class="card">
+                    <img src="/img/flag-of-Andorra.png" alt="Card image cap" id="rightOrWrongImage">
+                </div>
+                <div class="card">
+
+                </div>
+                <br>
+            </div>
+            <h2 id="rightOrWrongAnswer">Hey</h2>
+            <button type="button" class="btn btn-primary" id="continueButton">Continue the quiz.</button>
+        </div>
+    </div>
+</main>
+
+<footer class="container">
+    <p></p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
